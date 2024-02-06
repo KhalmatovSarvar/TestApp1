@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="options">Options</string>
+    <string name="store_owner">Store owner</string>
+    <string name="shop_profile">Shop Profile</string>
+    <string name="subscription">Subscription</string>
+    <string name="cashier">Cashier</string>
+    <string name="manage_loaners">Manage loaners</string>
+    <string name="list_of_items">List of items</string>
+    <string name="print_last_receipt">Print last receipt</string>
+    <string name="it_is_advised_to_sync_at_least_once_per_week">It is advised to sync at least once per week</string>
+    <string name="log_out">Log out</string>
+    <string name="synchronize">Synchronize</string>
+</resources>

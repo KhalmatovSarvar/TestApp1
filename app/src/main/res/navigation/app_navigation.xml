@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/optionsPage">
+
+    <fragment
+        android:id="@+id/optionsPage"
+        android:name="com.jamesmobiledev.testapp.OptionsPage"
+        android:label="fragment_options_page"
+        tools:layout="@layout/fragment_options_page" >
+        <action
+            android:id="@+id/action_optionsPage_to_shopProfileFragment"
+            app:destination="@id/shopProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopProfileFragment"
+        android:name="com.jamesmobiledev.testapp.ShopProfileFragment"
+        android:label="fragment_shop_profile"
+        tools:layout="@layout/fragment_shop_profile" />
+</navigation>
