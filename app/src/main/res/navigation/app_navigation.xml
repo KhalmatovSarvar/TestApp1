@@ -3,21 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_navigation"
-    app:startDestination="@id/optionsPage">
+    app:startDestination="@id/cashierFragment">
 
     <fragment
         android:id="@+id/optionsPage"
-        android:name="com.jamesmobiledev.testapp.OptionsPage"
+        android:name="com.jamesmobiledev.testapp.screens.OptionsFragment"
         android:label="fragment_options_page"
         tools:layout="@layout/fragment_options_page" >
         <action
             android:id="@+id/action_optionsPage_to_shopProfileFragment"
             app:destination="@id/shopProfileFragment" />
+        <action
+            android:id="@+id/action_optionsPage_to_listOfItemsFragment"
+            app:destination="@id/listOfItemsFragment" />
+        <action
+            android:id="@+id/action_optionsPage_to_subscriptionFragment"
+            app:destination="@id/subscriptionFragment" />
+        <action
+            android:id="@+id/action_optionsPage_to_manageLoanersFragment"
+            app:destination="@id/manageLoanersFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/shopProfileFragment"
-        android:name="com.jamesmobiledev.testapp.ShopProfileFragment"
+        android:name="com.jamesmobiledev.testapp.screens.ShopProfileFragment"
         android:label="fragment_shop_profile"
         tools:layout="@layout/fragment_shop_profile" />
+    <fragment
+        android:id="@+id/listOfItemsFragment"
+        android:name="com.jamesmobiledev.testapp.screens.ListOfItemsFragment"
+        android:label="fragment_list_of_items"
+        tools:layout="@layout/fragment_list_of_items" />
+    <fragment
+        android:id="@+id/manageLoanersFragment"
+        android:name="com.jamesmobiledev.testapp.screens.ManageLoanersFragment"
+        android:label="fragment_manage_loaners"
+        tools:layout="@layout/fragment_manage_loaners" />
+    <fragment
+        android:id="@+id/subscriptionFragment"
+        android:name="com.jamesmobiledev.testapp.screens.SubscriptionFragment"
+        android:label="fragment_subscription"
+        tools:layout="@layout/fragment_subscription" />
+    <fragment
+        android:id="@+id/cashierFragment"
+        android:name="com.jamesmobiledev.testapp.screens.CashierFragment"
+        android:label="fragment_cashier"
+        tools:layout="@layout/fragment_cashier" />
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.jamesmobiledev.testapp.screens.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.jamesmobiledev.testapp.screens.InventoryFragment"
+        android:label="fragment_inventory"
+        tools:layout="@layout/fragment_inventory" />
 </navigation>
