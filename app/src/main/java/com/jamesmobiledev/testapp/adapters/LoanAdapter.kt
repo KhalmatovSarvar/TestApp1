@@ -11,7 +11,7 @@ import com.jamesmobiledev.testapp.models.Loan
 
 class LoanAdapter(
     private val planList: List<Loan>,
-    private val onClick: (Loan)->Unit
+
 ) : RecyclerView.Adapter<LoanAdapter.LoanHolder>() {
 
 
@@ -25,9 +25,7 @@ class LoanAdapter(
     override fun onBindViewHolder(holder: LoanHolder, position: Int) {
         val plan = planList[position]
         holder.bind(plan)
-        holder.itemView.setOnClickListener{
-            onClick(plan)
-        }
+
     }
 
     override fun getItemCount(): Int = planList.size

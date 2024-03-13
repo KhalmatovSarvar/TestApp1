@@ -15,13 +15,13 @@
     <string name="log_out">Log out</string>
     <string name="synchronize">Synchronize</string>
     <string name="add_cashier">Add cashier</string>
-    <string name="cashiertxt">Cashier</string>
-    <string name="your_current_plan_basic">Your current plan : <b>Basic</b></string>
+    <string name="cashiertxt">Cashiers</string>
+    <string name="your_current_plan_basic">Your current plan : <font color="#000000" ><b>Basic</b></font></string>
     <string name="_500"><font color="red">-500 ₸</font></string>
     <string name="formatted_string">%s ₸</string>
     <string name="_500s">-500</string>
-    <string name="price">Price: <font color="#009EE1" >150 ₸</font>   ->   <font color="green">200 ₸</font> </string>
-    <string name="stock">Stock:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0<font color="green" >100</font></string>
-    <string name="profit">Profit:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0<font color="green" >33.3%</font></string>
-    <string name="unit_type">Unit type:  pcs</string>
+    <string name="price">Price: <font color="#009EE1" ><b>150 ₸</b></font>\u00A0\u00A0\u00A0➜\u00A0\u00A0\u00A0<font color="#00A410"><b>200 ₸</b></font> </string>
+    <string name="stock">Stock:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0<font color="#2D8C00" ><b>100</b></font></string>
+    <string name="profit">Profit:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0<font color="green" ><b>33.3 %</b></font></string>
+    <string name="unit_type">Unit type:\u00A0\u00A0\u00A0\u00A0\u00A0 pcs</string>
 </resources>

@@ -14,17 +14,18 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
+            app:titleTextAppearance="@style/ToolbarTitleStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:navigationIcon="@drawable/ic_back"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="?attr/homeAsUpIndicator"
             app:title="Subscription" />
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:background="@color/white"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ll_fragment_background"
             android:orientation="vertical"
             android:paddingHorizontal="16dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +36,7 @@
                 android:id="@+id/tv_t1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/inter_regular"
                 android:text="Subscription and billing"
                 android:textSize="17sp"
@@ -43,6 +44,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
             <TextView
+                android:layout_marginTop="8dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_semi_bol"
@@ -54,6 +56,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_marginTop="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_semi_bol"
@@ -64,6 +67,7 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:layout_marginTop="2dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_semi_bol"
@@ -83,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="10dp">
+                android:paddingTop="14dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -111,7 +115,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="14dp"
                     android:background="#7B7B7B" />
             </LinearLayout>
 
@@ -119,7 +123,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="12dp">
+                android:paddingTop="14dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -147,7 +151,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="14dp"
                     android:background="#7B7B7B" />
 
             </LinearLayout>
@@ -156,7 +160,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="12dp">
+                android:paddingTop="14dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -184,7 +188,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="14dp"
                     android:background="#7B7B7B" />
 
             </LinearLayout>
@@ -193,7 +197,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingTop="12dp">
+                android:paddingTop="14dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -221,17 +225,18 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="14dp"
                     android:background="#7B7B7B" />
 
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="4dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
                 android:backgroundTint="#D9D9D9"
+                android:layout_marginHorizontal="24dp"
                 android:fontFamily="@font/inter_regular"
                 android:text="Cancel subscription"
                 android:textColor="@color/black"
@@ -248,7 +253,7 @@
             android:fontFamily="@font/inter_regular"
             android:paddingStart="16dp"
             android:text="@string/your_current_plan_basic"
-            android:textColor="@color/black"
+            android:textColor="#515151"
             android:textSize="17sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
@@ -256,6 +261,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_subscription"
             android:layout_width="0dp"
+            android:clipToPadding="false"
+            android:paddingEnd="28dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:orientation="horizontal"
@@ -268,8 +275,8 @@
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="28dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="38dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="#FF9090"
             android:fontFamily="@font/inter_regular"

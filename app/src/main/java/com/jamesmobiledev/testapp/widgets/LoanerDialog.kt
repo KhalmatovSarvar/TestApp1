@@ -21,13 +21,12 @@ class LoanerDialog(
     private var _binding: DialogLoanerBinding? = null
     private val binding get() = _binding!!
     var nameArgs: String? = null
-    var cashAmountArgs: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val args = arguments
         nameArgs = args?.getString("name")
-        cashAmountArgs = args?.getString("cash")
+
     }
 
 
@@ -48,21 +47,6 @@ class LoanerDialog(
         // Access views using view binding
         binding.tvName.setText(nameArgs)
 
-        binding.et1.setText(cashAmountArgs)
-        binding.firstValue.text = binding.et2.text.toString()+" ₸"
-        binding.secondValue.text = binding.et1.text.toString()+" ₸"
-        if (cashAmountArgs!!.startsWith('-')) {
-            var value = 0
-            // If text starts with '-', parse the substring after it
-            value = cashAmountArgs!!.substring(1).toInt()
-            if (value > 0 && value < 3000) {
-                binding.secondValue.setTextColor(Color.parseColor("#FAFF00"))
-            } else {
-                binding.secondValue.setTextColor(Color.parseColor("#FF5B14"))
-            }
-        } else {
-            binding.secondValue.setTextColor(Color.parseColor("#0EAB9D"))
-        }// Your EditText
 
         binding.et1.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {}

@@ -91,7 +91,6 @@
         android:inputType="numberSigned"
         android:paddingStart="12dp"
         android:paddingEnd="8dp"
-        android:text="@string/_500s"
         android:textSize="17sp"
         android:textStyle="bold" />
 

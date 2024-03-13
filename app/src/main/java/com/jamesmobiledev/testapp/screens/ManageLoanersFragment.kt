@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -46,17 +47,24 @@ class ManageLoanersFragment : Fragment(R.layout.fragment_manage_loaners) {
             loanList = dummyData.loanList
 
             recyclerView = binding.rvLoaners
-            recyclerView.adapter = LoanAdapter(loanList){loan->
-                val args = Bundle().apply {
-                    putString("name", loan.name)
-                    putString("cash", loan.balance)
-                }
-                val dialog = LoanerDialog(){
+            recyclerView.adapter = LoanAdapter(loanList)
 
-                }
-                dialog.arguments = args
-                dialog.show(parentFragmentManager, "Alert")
-            }
+             binding.btnAddCashier.setOnClickListener {
+                 if ( binding.etCustomerName.text.isNotEmpty()&& binding.etPhoneNumber.text.isNotEmpty()){
+                     val args = Bundle().apply {
+                         putString("name", binding.etCustomerName.text.toString())
+                     }
+                     val dialog = LoanerDialog(){
+
+                     }
+                     dialog.arguments = args
+                     dialog.show(parentFragmentManager, "Alert")
+                 }else{
+                     Toast.makeText(requireContext(), "Fill required fields", Toast.LENGTH_SHORT).show()
+                 }
+
+             }
+
         }
     }
 

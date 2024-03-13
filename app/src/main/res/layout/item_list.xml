@@ -75,7 +75,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="16dp"
-                    android:fontFamily="@font/inter_semi_bol"
+                    android:fontFamily="@font/inter_regular"
                     android:gravity="center"
                     android:text="@string/stock"
                     android:textSize="14sp"
