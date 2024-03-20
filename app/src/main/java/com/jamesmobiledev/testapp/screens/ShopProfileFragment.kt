@@ -42,6 +42,10 @@ class ShopProfileFragment : Fragment(R.layout.fragment_shop_profile){
 
         val dummyData = DummyCashierData()
         cashierList = dummyData.cashierList
+        binding.btnAddCashier.setOnClickListener {
+           val dialog = AddEditCashierDialog(){}
+            dialog.show(parentFragmentManager, "Alert")
+        }
 
         recyclerView = binding.rvCashier
         recyclerView.adapter = CashierAdapter(cashierList) { cashier, position ->

@@ -1,400 +1,488 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_fragment_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Choose special if no barcode is given"
+        android:textSize="12sp" />
+
+    <RadioGroup
+        android:id="@+id/rdogrp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/dialog_fragment_background"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/btn1"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:text="Choose special if no barcode is given"
-            android:textSize="12sp" />
-
-        <RadioGroup
-            android:id="@+id/rdogrp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_selector_1"
+            android:button="@null"
+            android:checked="false"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:text="Special"
+            android:textSize="12sp" />
 
-            <RadioButton
-                android:id="@+id/btn1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:layout_weight="1"
-                android:background="@drawable/radio_btn_selector_1"
-                android:button="@null"
-                android:checked="false"
-                android:gravity="center"
-                android:text="Special"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/btn2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="0dp"
-                android:layout_weight="1"
-                android:background="@drawable/radio_btn_selector_2"
-                android:button="@null"
-                android:checked="true"
-                android:gravity="center"
-                android:text="Non-special"
-                android:textColor="@color/white" />
+        <RadioButton
+            android:id="@+id/btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_selector_2"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="Non-special"
+            android:textColor="@color/white" />
 
 
-        </RadioGroup>
+    </RadioGroup>
 
-        <TextView
-            android:layout_marginTop="8dp"
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:paddingStart="16dp"
+        android:text="Name"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/item_edit_background"
+        android:paddingStart="8dp"
+        android:text="Coca-Cola 0.5 l"
+        android:textColor="#484848"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:paddingStart="16dp"
+        android:text="Barcode"
+        android:textSize="12sp" />
+
+    <EditText
+        android:id="@+id/et_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/item_edit_background"
+        android:paddingStart="8dp"
+        android:text="1234567"
+        android:textColor="#484848"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:paddingStart="16dp"
+        android:text="Deliver"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/spinnerLayout_deliver"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:background="@drawable/item_edit_background"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/codeSpinner_deliver"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
-            android:paddingStart="16dp"
-            android:text="Name"
-            android:textSize="12sp" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_down" />
 
-        <EditText
-            android:textColor="#484848"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="16dp"
-            android:background="@drawable/item_edit_background"
-            android:paddingStart="8dp"
-            android:text="Coca-Cola 0.5 l"
-            android:textSize="12sp" />
+    </RelativeLayout>
 
 
-        <TextView
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
-            android:paddingStart="16dp"
-            android:text="Barcode"
-            android:textSize="12sp" />
-
-        <EditText
-            android:textColor="#484848"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="16dp"
-            android:background="@drawable/item_edit_background"
-            android:paddingStart="8dp"
-            android:text="1234567"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_marginTop="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
-            android:paddingStart="16dp"
-            android:text="Deliver"
-            android:textSize="12sp" />
-
-        <EditText
-            android:textColor="#484848"
-            android:textStyle="bold"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginHorizontal="16dp"
-            android:background="@drawable/item_edit_background"
-            android:paddingStart="8dp"
-            android:text="Daimler AG"
-            android:drawableEnd="@drawable/ic_down"
-            android:paddingEnd="8dp"
-            android:textSize="12sp" />
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Purchase price"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:paddingEnd="12dp"
-                    android:gravity="center"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="150"
-                    android:drawableEnd="@drawable/tenge"
-                    android:textSize="17sp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Selling price"
-                    android:textSize="12sp" />
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="200"
-                    android:gravity="center"
-                    android:drawableEnd="@drawable/tenge"
-                    android:paddingEnd="12dp"
-                    android:textSize="17sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Left on stock"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="center"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:text="150"
-                    android:paddingEnd="12dp"
-                    android:textSize="17sp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Unit type"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="Pcs"
-                    android:gravity="center"
-                    android:drawableEnd="@drawable/ic_down"
-                    android:paddingEnd="8dp"
-                    android:textSize="17sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Markup"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:paddingEnd="8dp"
-                    android:gravity="center"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="33.3"
-                    android:drawableEnd="@drawable/ic_percent"
-                    android:textSize="17sp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Margin"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="25.0"
-                    android:gravity="center"
-                    android:drawableEnd="@drawable/ic_percent"
-                    android:paddingEnd="8dp"
-                    android:textSize="17sp" />
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Category"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:textColor="#484848"
-                    android:textStyle="bold"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:paddingEnd="8dp"
-                    android:gravity="center"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="Drinks"
-                    android:drawableEnd="@drawable/ic_down"
-                    android:textSize="17sp" />
-            </LinearLayout>
-            <LinearLayout
-                android:visibility="invisible"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_marginTop="8dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/inter_regular"
-                    android:paddingStart="16dp"
-                    android:text="Selling price"
-                    android:textSize="12sp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@drawable/item_edit_background"
-                    android:paddingStart="8dp"
-                    android:text="200"
-                    android:gravity="center"
-                    android:drawableEnd="@drawable/tenge"
-                    android:paddingEnd="12dp"
-                    android:textSize="17sp" />
-            </LinearLayout>
-
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:layout_marginHorizontal="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_width="match_parent"
-            android:layout_height="70dp"
-            android:orientation="horizontal">
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/btn_cancel"
-                android:layout_width="72dp"
-                android:layout_height="25dp"
-                android:gravity="center"
-                android:layout_gravity="center"
-                android:background="@drawable/round_corner"
-                android:text="Cancel"
-                android:textColor="@color/white"
-                android:textSize="12sp" />
-
-            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Purchase price"
+                android:textSize="12sp" />
 
-            <ImageButton
-                android:id="@+id/btn_save"
-                android:layout_width="78dp"
-                android:layout_height="25dp"
-                android:layout_gravity="end|center_vertical"
-                android:background="@drawable/round_corner_save"
-                android:src="@drawable/ic_save" />
+            <EditText
+                android:id="@+id/et_purchase"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:drawableEnd="@drawable/tenge"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="12dp"
+                android:text="150"
+                android:textColor="#484848"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Selling price"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_sell"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:drawableEnd="@drawable/tenge"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="12dp"
+                android:text="200"
+                android:textColor="#484848"
+                android:textSize="17sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Left on stock"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_left_stock"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:gravity="center"
+                android:paddingEnd="12dp"
+                android:text="150"
+                android:textColor="#484848"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Unit type"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/spinnerLayout_unit_type"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/codeSpinner_unit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:paddingTop="10dp"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_down" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Markup"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_markup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:drawableEnd="@drawable/ic_percent"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="33.3"
+                android:textColor="#484848"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Margin"
+                android:textSize="12sp" />
+
+            <EditText
+                android:id="@+id/et_margin"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:drawableEnd="@drawable/ic_percent"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="25.0"
+                android:textColor="#484848"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Category"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:id="@+id/spinnerLayout_category"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/codeSpinner_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center" />
+
+                <ImageView
+                    android:paddingTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_down" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/inter_regular"
+                android:paddingStart="16dp"
+                android:text="Selling price"
+                android:textSize="12sp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@drawable/item_edit_background"
+                android:drawableEnd="@drawable/tenge"
+                android:gravity="center"
+                android:paddingStart="8dp"
+                android:paddingEnd="12dp"
+                android:text="200"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="72dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:background="@drawable/round_corner"
+            android:gravity="center"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_save"
+            android:layout_width="78dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end|center_vertical"
+            android:background="@drawable/round_corner_save"
+            android:src="@drawable/ic_save" />
+    </LinearLayout>
+
+</LinearLayout>
 
 

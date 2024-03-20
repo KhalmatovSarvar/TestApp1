@@ -20,7 +20,7 @@ import com.jamesmobiledev.testapp.R
 import com.jamesmobiledev.testapp.databinding.DialogAddEditCashierBinding
 import com.jamesmobiledev.testapp.models.Cashier
 
-class AddEditCashierDialog(
+class AddEditCashierDialog  (
     private val onDismiss: () -> Unit,
 ) : DialogFragment(R.layout.dialog_add_edit_cashier){
 
@@ -56,8 +56,13 @@ class AddEditCashierDialog(
 
 
         // Access views using view binding
+        if (nameArgs != null) {
         binding.etName.setText(nameArgs)
         binding.etPassword.setText(passwordArgs) // Your EditText
+        } else {
+            binding.etName.setText("")
+            binding.etPassword.setText("")
+        }
 
         // Example of setting a click listener on a button
         binding.btnDelete.setOnClickListener {
@@ -66,8 +71,13 @@ class AddEditCashierDialog(
         }
 
         binding.btnSave.setOnClickListener {
+            if (binding.etName.text.isEmpty() || binding.etPassword.text.isEmpty()) {
+                Toast.makeText(requireContext(), "Fill the required fields", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
             Toast.makeText(requireContext(), "Saved successfully", Toast.LENGTH_SHORT).show()
             dismiss()
+            }
         }
     }
 
@@ -78,42 +88,45 @@ class AddEditCashierDialog(
 
     override fun onStart() {
         super.onStart()
-
         // Calculate the position of the dialog
         val dialogWindow = dialog?.window
         dialogWindow?.setLayout(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.WRAP_CONTENT
         )
+        if (positionArgs!=null) {
 
 
 
-        // Get the position of the item in RecyclerView
-        val recyclerView = activity?.findViewById<RecyclerView>(R.id.rv_cashier)
-        val itemView = recyclerView?.layoutManager?.findViewByPosition(positionArgs!!)
-        val location = IntArray(2)
-        itemView?.getLocationOnScreen(location)
 
-        // Get the width of the screen
-        val displayMetrics = resources.displayMetrics
-        val screenWidth = displayMetrics.widthPixels
+            // Get the position of the item in RecyclerView
+            val recyclerView = activity?.findViewById<RecyclerView>(R.id.rv_cashier)
+            val itemView = recyclerView?.layoutManager?.findViewByPosition(positionArgs!!)
+            val location = IntArray(2)
+            itemView?.getLocationOnScreen(location)
 
-        // Calculate the desired width of the dialog
-        val dialogWidth = screenWidth - 4
+            // Get the width of the screen
+            val displayMetrics = resources.displayMetrics
+            val screenWidth = displayMetrics.widthPixels
 
-
-        val layoutParams = dialogWindow?.attributes
+            // Calculate the desired width of the dialog
+            val dialogWidth = screenWidth - 4
 
 
+            val layoutParams = dialogWindow?.attributes
 
-        // Adjust the dialog position below the item
-        dialogWindow?.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL)
-        layoutParams?.y = location[1] + itemView?.height!!
-        dialogWindow?.attributes = layoutParams
 
-        layoutParams?.width = dialogWidth
-        layoutParams?.horizontalMargin = 0.1f // Example value for horizontal margin, adjust as needed
 
+            // Adjust the dialog position below the item
+            dialogWindow?.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL)
+            layoutParams?.y = location[1] + itemView?.height!!
+            dialogWindow?.attributes = layoutParams
+
+            layoutParams?.width = dialogWidth
+            layoutParams?.horizontalMargin = 0.1f // Example value for horizontal margin, adjust as needed
+
+
+        }
 
     }
 

@@ -24,4 +24,36 @@
     <string name="stock">Stock:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0<font color="#2D8C00" ><b>100</b></font></string>
     <string name="profit">Profit:\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0<font color="green" ><b>33.3 %</b></font></string>
     <string name="unit_type">Unit type:\u00A0\u00A0\u00A0\u00A0\u00A0 pcs</string>
+
+    <string-array name="delivers">
+        <item>Daimler AG</item>
+        <item>Daimler AB</item>
+        <item>Daimler CD</item>
+        <item>Daimler CC</item>
+        <item>Daimler DD</item>
+        <item>Daimler AV</item>
+        <item>Daimler VC</item>
+        <item>Daimler SX</item>
+    </string-array>
+
+
+
+    <string-array name="pcs">
+        <item>pcs</item>
+        <item>kg</item>
+        <item>m</item>
+        <item>cm</item>
+        <item>g</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Drinks</item>
+        <item>Snacks</item>
+        <item>Desserts</item>
+        <item>Entrees</item>
+        <item>Appetizers</item>
+    </string-array>
+
+
+
 </resources>
