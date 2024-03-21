@@ -38,9 +38,9 @@
             android:paddingHorizontal="17dp">
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.15"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="0.05"
                 android:src="@drawable/ic_shop" />
 
             <TextView
@@ -73,9 +73,9 @@
             android:paddingHorizontal="17dp">
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.15"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="0.05"
                 android:src="@drawable/ic_subscription" />
 
             <TextView
@@ -119,9 +119,11 @@
             android:paddingHorizontal="17dp">
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.15"
+                android:layout_gravity="center_vertical"
+                android:layout_width="24dp"
+                android:paddingBottom="24dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05"
                 android:src="@drawable/ic_money" />
 
             <TextView
@@ -155,10 +157,10 @@
             android:paddingHorizontal="17dp">
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.15"
-                android:src="@drawable/ic_list" />
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="0.05"
+                android:src="@drawable/file_dock_search" />
 
             <TextView
                 android:layout_width="0dp"
@@ -194,7 +196,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.15"
-                android:src="@drawable/ic_print" />
+                android:src="@drawable/print" />
 
             <TextView
                 android:layout_width="0dp"

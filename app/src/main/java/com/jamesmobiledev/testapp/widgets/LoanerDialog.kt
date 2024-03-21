@@ -124,8 +124,14 @@ class LoanerDialog(
         }
 
         binding.btnSave.setOnClickListener {
-            Toast.makeText(requireContext(), "Saved successfully", Toast.LENGTH_SHORT).show()
-            dismiss()
+            if (binding.et1.text.isNotEmpty()&&
+                binding.et2.text.isNotEmpty()) {
+                Toast.makeText(requireContext(), "Saved successfully", Toast.LENGTH_SHORT).show()
+                dismiss()
+            }else{
+                Toast.makeText(requireContext(), "Fill required fields", Toast.LENGTH_SHORT).show()
+            }
+
         }
     }
 
